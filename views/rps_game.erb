@@ -1,1 +1,10 @@
 <h1>WELCOME TO ROCK PAPER SCISSORS</h1>
+  <h4> Your Move: <%= @game.play %> </h4>
+  <h4>Computer Move: <%= @game.computer_play %> </h4>
+<% if @game.won? %>
+  <h2> You WON</h2>
+<% elsif @game.tied? %>
+  <h2>ITS A TIE!</h2>
+<% else %>
+  <h2> YOU LOST </h2>
+<% end %>
